@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+html, body, ul, h1,h2,h3,h4, p {
+    margin: 0;
+    padding: 0;
+}
+html {
+	font-size: 14px;
+	line-height: 1.42;
+	@include breakpoint(48em) {
+		font-size: 15px;
+	}
+	@include breakpoint(64em) {
+		font-size: 16px;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	flex-direction: column;
+	min-width: 320px;
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 0 2px;
+	@include breakpoint(30em) {
+		padding: 0 15px;
+	}
+	@include breakpoint(48em) {
+		padding: 0 24px;
+	}
+}

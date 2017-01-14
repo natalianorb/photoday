@@ -1,0 +1,28 @@
+@include new('pager') {
+  @extend %middle-inline-block;
+  padding: 0 25px 0 0;
+  @include breakpoint(30em) {
+    padding: 0 20px;
+  }
+
+  @include has('item') {
+    width: 34px;
+    height: 34px;
+    @extend %middle-inline-block;
+    padding: 8px 0 0;
+    text-align: center;
+    @include breakpoint(30em) {
+      margin: 0 5px;
+    }
+    @include when('active') {
+      font-weight: 700;
+      border-radius: 50%;
+      background: #e6e6e6;
+    }
+  }
+
+  @include has('link') {
+    color: $black;
+    text-decoration: none;
+  }
+}

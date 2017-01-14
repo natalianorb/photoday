@@ -1,0 +1,40 @@
+@include new('banner') {
+  display: flex;
+  width: 100%;
+  padding: 10px 3px 4px;
+
+  @include breakpoint(30em) {
+    display: none;
+  }
+
+  @include has('img-wrap') {
+    min-width: 100px;
+  }
+
+  @include has('description') {
+    padding: 4.5px 0 0 19px;
+    background: #fbf6e8;
+    font-family: "Noto Sans", sans-serif;
+    text-align: left;
+    color: $black;
+  }
+
+  @include has('hint-text') {
+    font-size: 10px;
+    color: rgb(190, 190, 190);
+    font-weight: bold;
+  }
+
+  @include has('heading') {
+    padding: 1px 0 0;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+
+  @include has('subheading') {
+    padding: 1px 0 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

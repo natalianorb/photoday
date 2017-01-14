@@ -1,0 +1,145 @@
+$padding: 3px;
+$margin: 6px;
+@include new('photos') {
+  display: block;
+  @include has('list') {
+    @extend %clearfix;
+  }
+
+  @include has('item') {
+    float: left;
+    width: 25%;
+    @extend .img-wrap;
+    height: 48px;
+    margin: $margin 0 0;
+    padding: 0 $padding;
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    @include breakpoint(30em) {
+      width: 20%;
+      margin: 10px 0 0;
+      padding: 0 5px;
+      height: 53px;
+    }
+    @include breakpoint(48em) {
+      width: 25%;
+      height: 104px;
+      margin: 20px 0 0;
+      padding: 0 10px;
+    }
+
+    @include when('sticker') {
+      position: absolute;
+      left: 9px; top: 6px;
+      min-height: 53px;
+      margin: 0;
+      padding: 0;
+      @include breakpoint(30em) {
+        left: 10px;
+        top: 10px;
+        padding: inherit;
+      }
+      @include breakpoint(48em) {
+        left: 20px;
+        top: 20px;
+      }
+    }
+
+    @include when('adv') {
+      display: none;
+      @include breakpoint(30em) {
+        display: block;
+        width: 40%;
+        height: 242px;
+      }
+      @include breakpoint(48em) {
+        width: 25%;
+        height: 228px;
+      }
+    }
+  }
+
+  @include has('first') {
+    position: relative;
+    margin: $margin 0 0;
+    padding: 0 $padding;
+    @include breakpoint(30em) {
+      margin: 10px 0 0;
+      padding: 0 5px;
+    }
+    @include breakpoint(48em) {
+      margin: 20px 0 0;
+      padding: 0 10px;
+    }
+  }
+
+  @include has('description') {
+    display: none;
+    margin: 13px 0 0;
+    font-size: 13px;
+    font-family: "Noto Sans", sans-serif;
+    color: $black;
+    font-weight: bold;
+    letter-spacing: 0.56px;
+    &:before {
+
+    }
+    @include breakpoint(48em) {
+      display: block;
+    }
+  }
+  @include has('author') {
+    display: none;
+    font-size: 13px;
+    font-family: "Noto Sans", sans-serif;
+    color: #acacac;
+    @include breakpoint(48em) {
+      display: block;
+    }
+  }
+
+  @include has('date') {
+    height: 100%;
+    padding: 6px 3px 0;
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    color: $black;
+    opacity: 0.8;
+    background: $white;
+    @include breakpoint(30em) {
+      padding: 8px 3px 0;
+    }
+    @include breakpoint(48em) {
+      padding: 20px 3px 0;
+    }
+  }
+
+  @include has('day') {
+    font-size: 18px;
+    line-height: 1;
+    @include breakpoint(48em) {
+        font-size: 36px;
+    }
+  }
+
+  @include has('month') {
+    font-size: 14px;
+    @include breakpoint(48em) {
+      font-size: 18px;
+    }
+  }
+
+  @include has('img') {
+    @extend .img;
+    @include when('big') {
+      height: 202px;
+      @include breakpoint(30em) {
+        height: 286px;
+      }
+      @include breakpoint(48em) {
+        min-height: 455px;
+      }
+
+    }
+  }
+}

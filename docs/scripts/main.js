@@ -1,0 +1,1 @@
+var elem=document.querySelector(".photos__list"),msnry=new Masonry(elem,{itemSelector:"li",columnWidth:".photos__item",percentPosition:!0});
