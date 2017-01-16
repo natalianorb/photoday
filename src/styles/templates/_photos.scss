@@ -47,6 +47,7 @@ $margin: 6px;
 
     @include when('adv') {
       display: none;
+      text-align: right;
       @include breakpoint(30em) {
         display: block;
         width: 40%;
@@ -117,6 +118,18 @@ $margin: 6px;
   @include has('day') {
     font-size: 18px;
     line-height: 1;
+    @include breakpoint(30em) {
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 50%; right: 15px;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 3px solid transparent;
+        border-left: 3px solid $black;
+      }
+    }
     @include breakpoint(48em) {
         font-size: 36px;
     }
@@ -140,6 +153,10 @@ $margin: 6px;
         min-height: 455px;
       }
 
+    }
+    @include when('adv') {
+      display: inline-block;
+      width: auto;
     }
   }
 }

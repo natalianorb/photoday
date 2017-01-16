@@ -9,6 +9,7 @@ html
 		link(href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet")
 		link(rel="stylesheet" href="./styles/styles.min.css")
+		script(src="./scripts/modernizr.js" defer)
 	body
 		div.container
 			h1.heading День в фото
@@ -29,7 +30,7 @@ html
 					li.photos__item
 						img.photos__img(src="./assets/images/dance.png" alt="")
 					li.photos__item--adv
-						img.photos__img(src="./assets/images/addidas.png" alt="")
+						img.photos__img--adv(src="./assets/images/addidas.png" alt="")
 					li.photos__item
 						img.photos__img(src="./assets/images/room.png" alt="")
 					li.photos__item
@@ -104,6 +105,6 @@ html
 
 		script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
 		script(src="./scripts/main.js")
-		//script(src="./scripts/modernizr.js")
+	
 
 
